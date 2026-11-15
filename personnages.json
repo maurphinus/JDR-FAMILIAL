@@ -29,7 +29,10 @@
         "Fragments purifiés anti-magie",
         "Poudre lumineuse",
         "Petite clé noire flottante étrange",
-        "Grenouille mécanique en argent"
+        "Grenouille mécanique en argent",
+        "Sarbacane",
+        "10 fléchettes",
+        "Gourde"
       ],
       "familier": "Renardeau (nom à choisir)",
       "notes": "Le renardeau peut pister, explorer, détecter certains dangers et distraire. Il conserve ses instincts et peut être fatigué, effrayé ou légèrement blessé."
@@ -56,7 +59,10 @@
       "equipement": [
         "Marteau renforcé",
         "Cristal purifié fissuré",
-        "Fragments lumineux"
+        "Fragments lumineux",
+        "Armure légère",
+        "Bouclier",
+        "Une partie des provisions"
       ],
       "notes": "Peut fabriquer, réparer, comprendre ou modifier des mécanismes. +1 Corps appliqué, sans PV supplémentaire."
     },
@@ -109,12 +115,11 @@
         "Fiole sombre étrange",
         "Pendentif noir désactivé",
         "Masque brisé inoffensif",
-        "Pointe de baliste antique"
-      ],
-      "equipementEnvisage": [
+        "Pointe de baliste antique",
         "Hache à deux mains",
-        "Fléau",
-        "Arbalète"
+        "Seconde gourde",
+        "Reste des rations",
+        "Boîte au dragon"
       ],
       "notes": "Efficace au corps à corps, en charge et en actions physiques. +1 Corps appliqué, sans PV supplémentaire."
     }
