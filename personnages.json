@@ -11,7 +11,7 @@
       "corps": 1,
       "agilite": 3,
       "esprit": 1,
-      "pv": null,
+      "pv": 9,
       "pvMax": 9,
       "or": 11,
       "competences": [
@@ -31,7 +31,7 @@
         "Petite clé noire flottante étrange",
         "Grenouille mécanique en argent",
         "Sarbacane",
-        "10 fléchettes",
+        "8 fléchettes",
         "Gourde"
       ],
       "familier": "Renardeau (nom à choisir)",
@@ -45,7 +45,7 @@
       "corps": 3,
       "agilite": 1,
       "esprit": 3,
-      "pv": null,
+      "pv": 9,
       "pvMax": 10,
       "or": 11,
       "orSupplementaire": "Anciennes économies : montant inconnu",
@@ -62,7 +62,8 @@
         "Fragments lumineux",
         "Armure légère",
         "Bouclier",
-        "Une partie des provisions"
+        "Une partie des provisions",
+        "Épée de Ben (prêt temporaire, tenue en main)"
       ],
       "notes": "Peut fabriquer, réparer, comprendre ou modifier des mécanismes. +1 Corps appliqué, sans PV supplémentaire."
     },
@@ -74,7 +75,7 @@
       "corps": 1,
       "agilite": 1,
       "esprit": 3,
-      "pv": null,
+      "pv": 11,
       "pvMax": 11,
       "or": 11,
       "evolutionsEnReserve": 1,
@@ -99,7 +100,7 @@
       "corps": 5,
       "agilite": 1,
       "esprit": 0,
-      "pv": null,
+      "pv": 12,
       "pvMax": 12,
       "or": 26,
       "competences": [
@@ -109,7 +110,6 @@
         "Tir précis"
       ],
       "equipement": [
-        "Épée",
         "Bouclier",
         "Corde et grappin",
         "Fiole sombre étrange",
@@ -119,9 +119,11 @@
         "Hache à deux mains",
         "Seconde gourde",
         "Reste des rations",
-        "Boîte au dragon"
+        "Boîte au dragon",
+        "Épée (prêtée temporairement à Gabin)"
       ],
       "notes": "Efficace au corps à corps, en charge et en actions physiques. +1 Corps appliqué, sans PV supplémentaire."
     }
-  ]
+  ],
+  "notesPartie": "Après combat contre trois gobelins : chef et lancier hors de combat, archer hors de combat. Gabin a reçu 1 dégât. Lou a tiré 2 fléchettes. Arc et carquois gobelins au sol, non récupérés. Or : achats annoncés 32 PO d'équipement + 3 PO de boîte au dragon, mais répartition des paiements contradictoire dans la narration; soldes individuels laissés inchangés en attente de clarification. Les caractéristiques Corps 3 (Gabin) et 5 (Ben) de la fiche GitHub prévalent sur le pavé initial."
 }
