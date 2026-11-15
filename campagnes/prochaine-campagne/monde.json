@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "campagne": "Prochaine campagne",
+  "statut": "préparation",
+  "lieux": [],
+  "personnagesNonJoueurs": [],
+  "factions": [],
+  "relations": [],
+  "consequencesDurables": [],
+  "mysteres": [],
+  "notesMJ": []
+}
