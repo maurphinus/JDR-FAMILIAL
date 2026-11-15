@@ -1,93 +1,122 @@
 {
-  "version": 1,
+  "version": 2,
+  "caisseCommune": 1,
   "personnages": [
     {
       "id": "lou",
       "nom": "Lou",
-      "role": "Aventurière agile",
+      "role": "Aventurière furtive magique",
       "emoji": "🦊",
-      "corps": null,
+      "age": 7,
+      "corps": 1,
       "agilite": 3,
-      "esprit": null,
+      "esprit": 1,
       "pv": null,
-      "pvMax": null,
-      "or": null,
+      "pvMax": 9,
+      "or": 11,
       "competences": [
+        "Œil de lynx",
+        "Discrétion de chat",
+        "Esquive éclair",
         "Tir précis",
-        "Télékinésie",
-        "Illusions",
-        "Discrétion",
-        "Œil de lynx"
+        "Télékinésie légère",
+        "Illusion mineure",
+        "Parler aux animaux"
       ],
       "equipement": [
-        "Sarbacane"
+        "Arme légère",
+        "Amulette magique",
+        "Fragments purifiés anti-magie",
+        "Poudre lumineuse",
+        "Petite clé noire flottante étrange",
+        "Grenouille mécanique en argent"
       ],
-      "familier": "Renardeau",
-      "notes": "Valeurs à confirmer avec la fiche de référence."
+      "familier": "Renardeau (nom à choisir)",
+      "notes": "Le renardeau peut pister, explorer, détecter certains dangers et distraire. Il conserve ses instincts et peut être fatigué, effrayé ou légèrement blessé."
     },
     {
       "id": "gabin",
       "nom": "Gabin",
-      "role": "Forgeron aventurier",
+      "role": "Forgeron mystique",
       "emoji": "🔨",
-      "corps": null,
-      "agilite": null,
+      "corps": 3,
+      "agilite": 1,
       "esprit": 3,
       "pv": null,
-      "pvMax": null,
-      "or": null,
+      "pvMax": 10,
+      "or": 11,
+      "orSupplementaire": "Anciennes économies : montant inconnu",
       "competences": [
-        "Télékinésie",
-        "Observation",
-        "Escalade"
+        "Coup puissant",
+        "Télékinésie améliorée",
+        "Étincelle de feu améliorée",
+        "Savoir-faire artisanal en forge et mécanismes",
+        "Initiation à l'orfèvrerie (sans bonus permanent)"
       ],
       "equipement": [
-        "Marteau",
-        "Bouclier"
+        "Marteau renforcé",
+        "Cristal purifié fissuré",
+        "Fragments lumineux"
       ],
-      "familier": null,
-      "notes": "+1 Corps acquis ; valeur totale à confirmer."
+      "notes": "Peut fabriquer, réparer, comprendre ou modifier des mécanismes. +1 Corps appliqué, sans PV supplémentaire."
     },
     {
       "id": "yaya",
       "nom": "Yaya",
-      "role": "Guérisseuse",
+      "role": "Guérisseuse protectrice",
       "emoji": "🌿",
-      "corps": null,
-      "agilite": null,
-      "esprit": null,
+      "corps": 1,
+      "agilite": 1,
+      "esprit": 3,
       "pv": null,
-      "pvMax": null,
-      "or": null,
+      "pvMax": 11,
+      "or": 11,
+      "evolutionsEnReserve": 1,
       "competences": [
-        "Soin",
-        "Observation"
+        "Parade",
+        "Soin magique",
+        "Apaisement",
+        "Parler aux animaux"
       ],
-      "equipement": [],
-      "familier": null,
-      "notes": "Évolution conservée pour plus tard."
+      "equipement": [
+        "Bâton de soin",
+        "Herbes médicinales",
+        "Petit talisman protecteur"
+      ],
+      "notes": "Une évolution en réserve, à dépenser ultérieurement sans modifier rétroactivement les jets."
     },
     {
       "id": "ben",
       "nom": "Ben",
       "role": "Guerrier",
-      "emoji": "🪓",
-      "corps": null,
-      "agilite": null,
-      "esprit": null,
+      "emoji": "⚔️",
+      "corps": 5,
+      "agilite": 1,
+      "esprit": 0,
       "pv": null,
-      "pvMax": null,
-      "or": null,
+      "pvMax": 12,
+      "or": 26,
       "competences": [
-        "Charge",
-        "Résistance",
-        "Négociation"
+        "Résistant (+2 PV maximum, inclus dans les 12)",
+        "Charge sauvage améliorée",
+        "Coup puissant amélioré",
+        "Tir précis"
       ],
       "equipement": [
-        "Hache"
+        "Épée",
+        "Bouclier",
+        "Corde et grappin",
+        "Fiole sombre étrange",
+        "Pendentif noir désactivé",
+        "Masque brisé inoffensif",
+        "Pointe de baliste antique"
       ],
-      "familier": null,
-      "notes": "+1 Corps acquis ; valeur totale à confirmer."
+      "equipementEnvisage": [
+        "Hache à deux mains",
+        "Fléau",
+        "Arbalète"
+      ],
+      "notes": "Efficace au corps à corps, en charge et en actions physiques. +1 Corps appliqué, sans PV supplémentaire."
     }
   ]
 }
