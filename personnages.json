@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "personnages": [
+    {
+      "id": "lou",
+      "nom": "Lou",
+      "role": "Aventurière agile",
+      "emoji": "🦊",
+      "corps": null,
+      "agilite": 3,
+      "esprit": null,
+      "pv": null,
+      "pvMax": null,
+      "or": null,
+      "competences": [
+        "Tir précis",
+        "Télékinésie",
+        "Illusions",
+        "Discrétion",
+        "Œil de lynx"
+      ],
+      "equipement": [
+        "Sarbacane"
+      ],
+      "familier": "Renardeau",
+      "notes": "Valeurs à confirmer avec la fiche de référence."
+    },
+    {
+      "id": "gabin",
+      "nom": "Gabin",
+      "role": "Forgeron aventurier",
+      "emoji": "🔨",
+      "corps": null,
+      "agilite": null,
+      "esprit": 3,
+      "pv": null,
+      "pvMax": null,
+      "or": null,
+      "competences": [
+        "Télékinésie",
+        "Observation",
+        "Escalade"
+      ],
+      "equipement": [
+        "Marteau",
+        "Bouclier"
+      ],
+      "familier": null,
+      "notes": "+1 Corps acquis ; valeur totale à confirmer."
+    },
+    {
+      "id": "yaya",
+      "nom": "Yaya",
+      "role": "Guérisseuse",
+      "emoji": "🌿",
+      "corps": null,
+      "agilite": null,
+      "esprit": null,
+      "pv": null,
+      "pvMax": null,
+      "or": null,
+      "competences": [
+        "Soin",
+        "Observation"
+      ],
+      "equipement": [],
+      "familier": null,
+      "notes": "Évolution conservée pour plus tard."
+    },
+    {
+      "id": "ben",
+      "nom": "Ben",
+      "role": "Guerrier",
+      "emoji": "🪓",
+      "corps": null,
+      "agilite": null,
+      "esprit": null,
+      "pv": null,
+      "pvMax": null,
+      "or": null,
+      "competences": [
+        "Charge",
+        "Résistance",
+        "Négociation"
+      ],
+      "equipement": [
+        "Hache"
+      ],
+      "familier": null,
+      "notes": "+1 Corps acquis ; valeur totale à confirmer."
+    }
+  ]
+}
