@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "statut": "validé",
+  "source": "Pavé de démarrage Les Chroniques du Vieux Monde, section 5, complété uniquement par les précisions explicites de la section 6",
+  "regleGenerale": "Résultat final = 2d6 + caractéristique + compétence + circonstances. 2 naturel : échec critique ; 12 naturel : réussite critique. Les critiques naturels priment sur les bonus ordinaires.",
+  "noteMagie": "La magie peut échouer, être résistée ou avoir des conséquences inattendues. Les limitations d'utilisation dépendent du sort et de la situation. Aucun coût en ressource ou nombre d'utilisations n'est fixé dans la source.",
+  "modification": "Les effets validés ne doivent pas être modifiés silencieusement. Toute révision exige une décision explicite et un commit GitHub.",
+  "competences": [
+    {
+      "nom": "Coup puissant",
+      "type": "compétence",
+      "effet": "+1 en attaque rapprochée. En cas de réussite, +1 dégât.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Coup puissant amélioré",
+      "type": "compétence",
+      "effet": "+1 en attaque rapprochée. En cas de réussite, +1 dégât. Sur un résultat final de 10 ou plus, peut briser une protection légère ou un obstacle fragile adapté.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Parade",
+      "type": "compétence",
+      "effet": "Une fois par combat, annule complètement une attaque reçue, après confirmation de la touche et avant les dégâts.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Charge sauvage améliorée",
+      "type": "compétence",
+      "effet": "+2 en attaque lors d'une charge. Sur une réussite, peut repousser ou déséquilibrer l'adversaire lorsque la situation le permet. En cas d'échec, risque de chute, de perte d'équilibre ou de mauvaise posture.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Tir précis",
+      "type": "compétence",
+      "effet": "+1 pour les attaques à distance. Sur un résultat final de 10 ou plus, peut viser un point faible ou obtenir un effet de précision particulier.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Esquive éclair",
+      "type": "compétence",
+      "effet": "+1 pour éviter une attaque. Sur un résultat naturel de 12, permet une contre-attaque gratuite si la situation le permet.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Discrétion de chat",
+      "type": "compétence",
+      "effet": "+1 pour se cacher, se déplacer discrètement ou infiltrer un endroit.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Œil de lynx",
+      "type": "compétence",
+      "effet": "Facilite la détection d'indices, pièges, traces et détails cachés. Aucun bonus chiffré n'est spécifié.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Résistant",
+      "type": "compétence",
+      "effet": "+2 PV maximum. Le bonus est déjà inclus dans les PV maximums du personnage concerné.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Parler aux animaux",
+      "type": "compétence",
+      "effet": "Permet de comprendre les émotions, intentions et réactions simples des animaux. Une excellente réussite peut permettre une communication plus précise. Les animaux ne deviennent pas omniscients.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Étincelle de feu améliorée",
+      "type": "sort",
+      "effet": "Inflige 2 dégâts à distance. Permet d'allumer un petit objet combustible et de mieux contrôler une petite flamme.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Télékinésie légère",
+      "type": "sort",
+      "effet": "Permet de déplacer ou manipuler de petits objets à distance.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Télékinésie améliorée",
+      "type": "sort",
+      "effet": "Permet de déplacer des objets plus lourds ou de réaliser des manipulations plus complexes, dans des limites raisonnables.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Illusion mineure",
+      "type": "sort",
+      "effet": "Crée temporairement une petite illusion visuelle ou sonore. Ne permet pas de contrôler mentalement une personne.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Soin magique",
+      "type": "sort",
+      "effet": "Rend 3 PV, sans dépasser les PV maximums.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Apaisement",
+      "type": "sort",
+      "effet": "Calme une créature ou une personne agitée sans la forcer à obéir.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Savoir-faire artisanal en forge et mécanismes",
+      "type": "compétence",
+      "effet": "Permet de tenter de fabriquer, réparer, comprendre ou modifier des mécanismes. Aucun bonus chiffré n'est spécifié.",
+      "statut": "validé"
+    },
+    {
+      "nom": "Initiation à l'orfèvrerie (sans bonus permanent)",
+      "type": "compétence",
+      "effet": "Initiation à l'orfèvrerie acquise, sans bonus permanent.",
+      "statut": "validé"
+    }
+  ]
+}
