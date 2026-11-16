@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "caisseCommune": 1,
+  "caisseCommune": 5,
   "personnages": [
     {
       "id": "lou",
@@ -13,7 +13,7 @@
       "esprit": 1,
       "pv": 9,
       "pvMax": 9,
-      "or": 11,
+      "or": 8,
       "competences": [
         "Œil de lynx",
         "Discrétion de chat",
@@ -32,7 +32,9 @@
         "Grenouille mécanique en argent",
         "Sarbacane",
         "8 fléchettes",
-        "Gourde"
+        "Gourde",
+        "Arc court gobelin",
+        "7 flèches"
       ],
       "familier": "Renardeau (nom à choisir)",
       "notes": "Le renardeau peut pister, explorer, détecter certains dangers et distraire. Il conserve ses instincts et peut être fatigué, effrayé ou légèrement blessé."
@@ -47,8 +49,8 @@
       "esprit": 3,
       "pv": 9,
       "pvMax": 10,
-      "or": 11,
-      "orSupplementaire": "Anciennes économies : montant inconnu",
+      "or": 9,
+      "orSupplementaire": "7 PO d'anciennes économies, déterminées par tirage 2d6 (1+6), incluses dans le solde de 9 PO",
       "competences": [
         "Coup puissant",
         "Télékinésie améliorée",
@@ -63,7 +65,8 @@
         "Armure légère",
         "Bouclier",
         "Une partie des provisions",
-        "Épée de Ben (prêt temporaire, tenue en main)"
+        "Épée de Ben (prêt temporaire, tenue en main)",
+        "Couteau nain (dague)"
       ],
       "notes": "Peut fabriquer, réparer, comprendre ou modifier des mécanismes. +1 Corps appliqué, sans PV supplémentaire."
     },
@@ -102,7 +105,7 @@
       "esprit": 0,
       "pv": 12,
       "pvMax": 12,
-      "or": 26,
+      "or": 0,
       "competences": [
         "Résistant (+2 PV maximum, inclus dans les 12)",
         "Charge sauvage améliorée",
@@ -120,10 +123,12 @@
         "Seconde gourde",
         "Reste des rations",
         "Boîte au dragon",
-        "Épée (prêtée temporairement à Gabin)"
+        "Épée (prêtée temporairement à Gabin)",
+        "Petite clé en fer récupérée sur le chef gobelin"
       ],
       "notes": "Efficace au corps à corps, en charge et en actions physiques. +1 Corps appliqué, sans PV supplémentaire."
     }
   ],
-  "notesPartie": "Après combat contre trois gobelins : chef et lancier hors de combat, archer hors de combat. Gabin a reçu 1 dégât. Lou a tiré 2 fléchettes. Arc et carquois gobelins au sol, non récupérés. Or : achats annoncés 32 PO d'équipement + 3 PO de boîte au dragon, mais répartition des paiements contradictoire dans la narration; soldes individuels laissés inchangés en attente de clarification. Les caractéristiques Corps 3 (Gabin) et 5 (Ben) de la fiche GitHub prévalent sur le pavé initial."
+  "notesPartie": "Finances régularisées : achats 35 PO = Ben 26 PO, Lou 3 PO, Gabin 6 PO. Gabin disposait de 7 PO d'économies supplémentaires tirées au hasard (2d6 : 1+6). Soldes actuels : Ben 0 PO, Lou 8 PO, Gabin 9 PO (2 restants + 7 économies), Yaya 11 PO. Caisse commune initiale 1 PO + butin 2 PO 18 PA - indemnisation boulanger 10 PA + vente 2 PO 2 PA = 5 PO 10 PA. Lou garde arc et 7 flèches, Gabin couteau nain; lance et sabre brisé vendus. Petite clé en fer attribuée provisoirement à Ben qui l'avait trouvée. Épée de Ben prêtée à Gabin. Gabin 9/10 PV. Aucun achat de fléchettes spéciales encore réalisé.",
+  "caisseCommuneArgent": 10
 }
