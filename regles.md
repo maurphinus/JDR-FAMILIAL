@@ -121,6 +121,27 @@ Une nouvelle campagne peut être un **nouveau départ narratif** : ne pas ramene
 
 Pour chaque campagne, consigner dans son journal les séances, événements, quêtes et découvertes ; dans sa mémoire du monde, les lieux, PNJ, factions, relations, mystères et conséquences durables. Ne pas confondre le journal d'une campagne avec celui d'une autre. Ne pas inventer de possessions ou de richesses sans événement de jeu.
 
+## 9 bis. Registres persistants des lieux et des prix
+
+La campagne courante dispose de deux fichiers supplémentaires :
+
+- `monde/lieux.json` : registre des lieux visités, découverts ou décrits en jeu.
+- `monde/prix.json` : registre des tarifs effectivement annoncés ou constatés en jeu.
+
+**À chaque mise à jour du monde demandée par les joueurs**, relire les deux registres et y intégrer les nouvelles informations confirmées pendant la séance, sans effacer les anciennes données. Si une information n'a pas été établie, la laisser inconnue au lieu de l'inventer.
+
+### Lieux
+
+Pour chaque lieu, conserver si connus : identifiant stable, nom, type, région, lieu parent, description, accès, bâtiments et points d'intérêt, personnages ou factions associés, état actuel, découvertes, événements et changements durables. Préserver l'historique lorsqu'un lieu change. Réutiliser le même identifiant pour les visites suivantes et éviter les doublons.
+
+### Prix
+
+Pour chaque prix constaté, conserver si connus : objet ou service, montant numérique, devise (PO, PA, etc.), unité ou quantité, lieu, marchand, conditions particulières, source narrative et date ou séance d'observation. Les prix sont **contextuels**, pas universels. En cas de changement, conserver l'ancien tarif dans l'historique et ajouter la nouvelle observation. Distinguer prix demandé, prix négocié et prix effectivement payé. Ne pas transformer une estimation du MJ en prix déjà observé.
+
+### Synchronisation et séparation des campagnes
+
+Lorsqu'une sauvegarde du monde est demandée, actualiser les lieux et les prix **en plus** des événements et des PNJ concernés. Ne pas prétendre à une sauvegarde si GitHub n'a pas confirmé l'écriture. Ces deux registres initiaux correspondent à la campagne courante ; avant une nouvelle campagne indépendante, créer des registres distincts ou demander explicitement si les lieux et prix doivent être partagés.
+
 ## 10. Priorités du MJ
 
 1. Raconter une aventure médiévale fantastique cohérente.
