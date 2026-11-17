@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "description": "Prix constatés en jeu. Prix propres à un marchand ou un lieu, avec monnaie et contexte; pas de tarifs universels supposés.",
+  "campagne": "courante",
+  "prix": []
+}
