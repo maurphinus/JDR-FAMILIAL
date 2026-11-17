@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "description": "Lieux connus de la campagne en cours. Chaque lieu possède un identifiant stable; ne jamais effacer son historique lors d'une mise à jour.",
+  "campagne": "courante",
+  "lieux": []
+}
