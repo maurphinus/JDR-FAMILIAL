@@ -103,7 +103,7 @@ let dragAnchor=null;
 const figures=document.querySelector('#lab-figures');
 function moveAnchor(e){
  if(!dragAnchor||!anchorConfig)return;
- const svg=dragAnchor.svg,rect=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal;
+ const rect=dragAnchor.rect,vb=dragAnchor.viewBox;
  if(!rect.width||!rect.height)return;
  const pointX=(e.clientX-rect.left)*vb.width/rect.width,pointY=(e.clientY-rect.top)*vb.height/rect.height;
  const a=anchorConfig.avatars[dragAnchor.person],scale=anchorConfig.pixelsParCm,top=224-a.tailleCm*scale,left=105-a.largeurCm*scale/2;
@@ -115,7 +115,7 @@ figures.addEventListener('pointerdown',e=>{
  if(!document.querySelector('#anchor-editor').open||!anchorConfig)return;
  const svg=e.target.closest('svg[data-person]');if(!svg)return;
  const person=svg.dataset.person;if(person!==anchorPerson())return;
- dragAnchor={svg,person,field:anchorField(),pointer:e.pointerId};
+ dragAnchor={person,field:anchorField(),pointer:e.pointerId,rect:svg.getBoundingClientRect(),viewBox:{width:svg.viewBox.baseVal.width,height:svg.viewBox.baseVal.height}};
  figures.setPointerCapture(e.pointerId);moveAnchor(e);
 });
 figures.addEventListener('pointermove',e=>{if(dragAnchor)moveAnchor(e)});
