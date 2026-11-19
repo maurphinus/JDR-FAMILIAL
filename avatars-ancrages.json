@@ -15,20 +15,26 @@
         "x": 13,
         "y": 77
       },
-      "couleur": "#a68bd1"
+      "couleur": "#a68bd1",
+      "rotations": {
+        "hache": 37
+      }
     },
     "ben": {
       "tailleCm": 178,
       "largeurCm": 70,
       "mainDroite": {
-        "x": 60,
-        "y": 110
+        "x": 65.7,
+        "y": 111.6
       },
       "mainGauche": {
-        "x": 1.5,
-        "y": 110
+        "x": 6.9,
+        "y": 109.2
       },
-      "couleur": "#b87950"
+      "couleur": "#b87950",
+      "rotations": {
+        "hache": 18
+      }
     }
   },
   "objets": {
