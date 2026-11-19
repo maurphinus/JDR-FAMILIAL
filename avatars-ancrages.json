@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "unite": "cm",
+  "pixelsParCm": 1.15,
+  "description": "Prototype géométrique, dimensions illustratives et non officielles. Les objets conservent la même taille quel que soit le porteur. Les ancrages sont en coordonnées locales (cm) depuis le haut-gauche de chaque dessin.",
+  "avatars": {
+    "lou": {
+      "tailleCm": 125,
+      "largeurCm": 50,
+      "mainDroite": {
+        "x": 37,
+        "y": 77
+      },
+      "mainGauche": {
+        "x": 13,
+        "y": 77
+      },
+      "couleur": "#a68bd1"
+    },
+    "ben": {
+      "tailleCm": 178,
+      "largeurCm": 70,
+      "mainDroite": {
+        "x": 53,
+        "y": 110
+      },
+      "mainGauche": {
+        "x": 17,
+        "y": 110
+      },
+      "couleur": "#b87950"
+    }
+  },
+  "objets": {
+    "hache": {
+      "nom": "Hache à deux mains",
+      "largeurCm": 50,
+      "hauteurCm": 145,
+      "ancrage": {
+        "x": 24,
+        "y": 106
+      },
+      "mains": 2
+    },
+    "bouclier": {
+      "nom": "Bouclier",
+      "largeurCm": 48,
+      "hauteurCm": 65,
+      "ancrage": {
+        "x": 24,
+        "y": 32
+      },
+      "mains": 1
+    }
+  }
+}
