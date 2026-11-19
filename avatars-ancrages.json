@@ -21,11 +21,11 @@
       "tailleCm": 178,
       "largeurCm": 70,
       "mainDroite": {
-        "x": 66,
+        "x": 60,
         "y": 110
       },
       "mainGauche": {
-        "x": 16,
+        "x": 1.5,
         "y": 110
       },
       "couleur": "#b87950"
