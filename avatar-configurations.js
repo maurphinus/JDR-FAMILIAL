@@ -23,7 +23,7 @@ function avatarState(panel){
  const right=panel.querySelector('[data-avatar-right]').value,left=panel.querySelector('[data-avatar-left]').value;
  const id=panel.dataset.avatarId,items=avatarAvailable(window.avatarPeople?.[id]||{});
  const chosen=[right,left].filter(Boolean),axe=chosen.includes('hache');
- const valid=!(right&&right===left)&&(!axe||(right==='hache'&&left==='hache'));
+ const valid=axe?(right==='hache'&&left==='hache'):!(right&&right===left);
  // Une hache à deux mains occupe automatiquement les deux mains.
  const config=axe?'hache-2m':(right||'libre')+'-D__'+(left||'libre')+'-G';
  return {right,left,items,valid,config,id};
