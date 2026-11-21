@@ -41,6 +41,7 @@ window.avatarPeople={};window.avatarManifest={};
 fetch('./images/avatars/manifest.json').then(r=>r.ok?r.json():{}).then(m=>{window.avatarManifest=m;document.querySelectorAll('[data-avatar-id]').forEach(updateAvatar)}).catch(()=>{});
 el.addEventListener('change',e=>{
  const panel=e.target.closest('[data-avatar-id]');if(!panel||!e.target.matches('[data-avatar-right],[data-avatar-left]'))return;
+ if(e.target.value && e.target.value!=='hache'){const other=panel.querySelector(e.target.matches('[data-avatar-right]')?'[data-avatar-left]':'[data-avatar-right]');if(other.value===e.target.value)other.value='';}
  if(e.target.value==='hache'){
   const other=panel.querySelector(e.target.matches('[data-avatar-right]')?'[data-avatar-left]':'[data-avatar-right]');
   other.value='hache';
