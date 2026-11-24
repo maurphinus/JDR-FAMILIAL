@@ -1,1 +1,40 @@
-{}
+{
+  "ben": {
+    "bouclier-D__epee-G": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/bouclier-d__epee-g.png"
+    },
+    "bouclier-D__libre-G": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/bouclier-d__libre-g.png"
+    },
+    "epee-D__bouclier-G": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/epee-d__bouclier-g.png"
+    },
+    "epee-D__libre-G": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/epee-d__libre-g.png"
+    },
+    "hache-2m": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/hache-2m.png"
+    },
+    "libre-D__bouclier-G": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/libre-d__bouclier-g.png"
+    },
+    "libre-D__epee-G": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/libre-d__epee-g.png"
+    },
+    "libre-D__libre-G": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/libre-d__libre-g.png"
+    },
+    "torche-D__libre-G": {
+      "status": "validated",
+      "path": "images/avatars/production/ben/normal/torche-d__libre-g.png"
+    }
+  }
+}
