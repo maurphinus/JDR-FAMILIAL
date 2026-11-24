@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "caisseCommune": 5,
+  "personnages": [
+    {
+      "id": "ben",
+      "nom": "Ben",
+      "role": "Guerrier",
+      "emoji": "⚔️",
+      "corps": 5,
+      "agilite": 1,
+      "esprit": 0,
+      "pv": 12,
+      "pvMax": 12,
+      "or": 0,
+      "competences": [
+        "Résistant (+2 PV maximum, inclus dans les 12)",
+        "Charge sauvage améliorée",
+        "Coup puissant amélioré",
+        "Tir précis"
+      ],
+      "equipement": [
+        "Bouclier",
+        "Hache à deux mains",
+        "Épée",
+        "Torche",
+        "Lanterne",
+        "Dague",
+        "Masse",
+        "Lance à une main",
+        "Lance à deux mains",
+        "Arc court gobelin",
+        "Arc long",
+        "Arbalète",
+        "Espadon",
+        "Marteau à deux mains",
+        "Marteau renforcé",
+        "Bâton magique",
+        "Sceptre",
+        "Fiole de soin",
+        "Grappin",
+        "Armure légère",
+        "Armure lourde",
+        "Casque",
+        "Gourde",
+        "Rations"
+      ],
+      "notes": "Personnage de test : équipement fictif, sans effet sur la campagne."
+    }
+  ],
+  "notesPartie": "Laboratoire uniquement.",
+  "caisseCommuneArgent": 10
+}
