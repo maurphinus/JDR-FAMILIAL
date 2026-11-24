@@ -1,0 +1,2 @@
+# Références objets
+Une référence PNG validée par objet physique, réutilisable entre personnages si c'est le même objet. Pour les équipements existants, extraire ou reproduire le design depuis un avatar validé. Ne pas remplacer arbitrairement les motifs. Les dimensions en cm sont facultatives et à confirmer. Les références servent à la génération IA, pas à la superposition. Le catalogue ne modifie pas les inventaires officiels.

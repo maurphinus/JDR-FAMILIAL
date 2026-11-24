@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "objects": [
+    {
+      "id": "epee",
+      "label": "Épée",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "bouclier",
+      "label": "Bouclier",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "hache",
+      "label": "Hache à deux mains",
+      "hands": 2,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "torche",
+      "label": "Torche",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "lanterne",
+      "label": "Lanterne",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "dague",
+      "label": "Dague",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "masse",
+      "label": "Masse",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "arc-court",
+      "label": "Arc court",
+      "hands": 2,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "arc-long",
+      "label": "Arc long",
+      "hands": 2,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "arbalete",
+      "label": "Arbalète",
+      "hands": 2,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "espadon",
+      "label": "Espadon",
+      "hands": 2,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "lance-1m",
+      "label": "Lance à une main",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "lance-2m",
+      "label": "Lance à deux mains",
+      "hands": 2,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "marteau-2m",
+      "label": "Marteau à deux mains",
+      "hands": 2,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "marteau-renforce",
+      "label": "Marteau renforcé",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "baton-magique",
+      "label": "Bâton magique",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "sceptre",
+      "label": "Sceptre",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "fiole-soin",
+      "label": "Fiole de soin",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    },
+    {
+      "id": "grappin",
+      "label": "Grappin",
+      "hands": 1,
+      "reference": null,
+      "lengthCm": null,
+      "status": "a_produire"
+    }
+  ]
+}
