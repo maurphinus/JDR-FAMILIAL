@@ -1,0 +1,35 @@
+name: Optimiser avatar maître Ben
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/avatar-reference.yml'
+      - 'images/avatars/production/ben/normal/libre-d__libre-g.png'
+permissions:
+  contents: write
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install Pillow
+      - run: |
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          p=Path('images/avatars/production/ben/normal/libre-d__libre-g.png')
+          im=Image.open(p).convert('RGBA')
+          bg=Image.new('RGB',im.size,'white')
+          bg.paste(im,mask=im.getchannel('A'))
+          out=p.with_suffix('.jpg')
+          for q in range(95,39,-5):
+              bg.save(out,quality=q,optimize=True,subsampling=0)
+              if out.stat().st_size<800000: break
+          assert out.stat().st_size<800000
+          print(out.stat().st_size)
+          PY
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add images/avatars/production/ben/normal/libre-d__libre-g.jpg
+          git diff --cached --quiet || (git commit -m 'Add optimized Ben master reference' && git push)
