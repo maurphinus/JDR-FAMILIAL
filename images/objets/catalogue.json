@@ -5,33 +5,33 @@
       "id": "epee",
       "label": "Épée",
       "hands": 1,
-      "reference": null,
+      "reference": "images/objets/references/epee.png",
       "lengthCm": null,
-      "status": "a_produire"
+      "status": "validated"
     },
     {
       "id": "bouclier",
       "label": "Bouclier",
       "hands": 1,
-      "reference": null,
+      "reference": "images/objets/references/bouclier.png",
       "lengthCm": null,
-      "status": "a_produire"
+      "status": "validated"
     },
     {
       "id": "hache",
       "label": "Hache à deux mains",
       "hands": 2,
-      "reference": null,
+      "reference": "images/objets/references/hache.png",
       "lengthCm": null,
-      "status": "a_produire"
+      "status": "validated"
     },
     {
       "id": "torche",
       "label": "Torche",
       "hands": 1,
-      "reference": null,
+      "reference": "images/objets/references/torche.png",
       "lengthCm": null,
-      "status": "a_produire"
+      "status": "validated"
     },
     {
       "id": "lanterne",
