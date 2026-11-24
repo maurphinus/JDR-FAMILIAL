@@ -25,7 +25,7 @@ const objets={
 };
 function itemsClickable(items){return items?.length?items.map(x=>`<button type="button" class="chip skill" data-item="${safe(x)}" aria-label="Détails de ${safe(x)}">${safe(x)} ⓘ</button>`).join(''):'<span class="muted">À découvrir</span>'}
 function atelier(p){const fields=[["cheveux","Coiffure"],["couleurCheveux","Couleur des cheveux"],["yeux","Couleur des yeux"],["tenue","Tenue"],["style","Style du portrait"],["details","Description libre du personnage (visage, silhouette, vêtements, accessoires, allure…)"]];return `<details class="atelier section"><summary>🎨 Personnaliser mon héros</summary><p class="muted">Tes choix sont conservés uniquement sur cet appareil. Le bouton Copier permet de les transmettre au maître du jeu pour le futur portrait.</p>${fields.map(([key,label])=>`<label>${label}${options[key]?`<select data-look="${key}">${options[key].map(x=>`<option value="${safe(x)}">${safe(x)}</option>`).join('')}</select>`:`<textarea rows="5" maxlength="2000" data-look="${key}" placeholder="Décris ton personnage librement : taille, silhouette, visage, cheveux, regard, vêtements, accessoires, attitude…"></textarea>`}</label>`).join('')}<button type="button" data-copy-look="${p.id}">📋 Copier mon apparence</button><p class="muted look-status" role="status"></p></details>`}
-function render(p){return `<article class="hero"><div class="identity"><img class="portrait" src="./portrait-${safe(p.id)}.jpg" alt="Portrait fantasy de ${safe(p.nom)}" loading="lazy" onerror="this.hidden=true"><div class="avatar avatar-fallback" aria-hidden="true">${safe(p.emoji)}</div><h2>${safe(p.nom)}</h2><p class="role">${safe(p.role)}</p><div class="line">❤️ <b>Vie :</b> ${fmt(p.pv)} / ${fmt(p.pvMax)} &nbsp; 🪙 <b>Or :</b> ${fmt(p.or)}</div><div class="stats">${[['Corps',p.corps],['Agilité',p.agilite],['Esprit',p.esprit]].map(([k,v])=>`<div class="stat"><small>${k}</small><strong>${fmt(v)}</strong></div>`).join('')}</div>${p.familier?`<p>🐾 <b>Familier :</b> ${safe(p.familier)}</p>`:''}${p.orSupplementaire?`<p class="muted">🪙 ${safe(p.orSupplementaire)}</p>`:''}${p.evolutionsEnReserve?`<p>⭐ <b>Évolution en réserve :</b> ${p.evolutionsEnReserve}</p>`:''}${p.notes?`<p class="muted">${safe(p.notes)}</p>`:''}</div><div class="details"><section class="section"><h3>✨ Compétences</h3><div class="chips">${skills(p.competences)}</div></section>${equipSection(p)}${avatarSection(p)}${p.equipementEnvisage?.length?`<section class="section"><h3>🛒 Équipement envisagé (non acheté)</h3><div class="chips">${chips(p.equipementEnvisage)}</div></section>`:''}${atelier(p)}</div></article>`}
+function render(p){return `<article class="hero"><div class="identity"><img class="portrait" src="./portrait-${safe(p.id)}.jpg" alt="Portrait fantasy de ${safe(p.nom)}" loading="lazy" onerror="this.hidden=true"><div class="avatar avatar-fallback" aria-hidden="true">${safe(p.emoji)}</div><h2>${safe(p.nom)}</h2><p class="role">${safe(p.role)}</p><div class="line">❤️ <b>Vie :</b> ${fmt(p.pv)} / ${fmt(p.pvMax)} &nbsp; 🪙 <b>Or :</b> ${fmt(p.or)}</div><div class="stats">${[['Corps',p.corps],['Agilité',p.agilite],['Esprit',p.esprit]].map(([k,v])=>`<div class="stat"><small>${k}</small><strong>${fmt(v)}</strong></div>`).join('')}</div>${p.familier?`<p>🐾 <b>Familier :</b> ${safe(p.familier)}</p>`:''}${p.orSupplementaire?`<p class="muted">🪙 ${safe(p.orSupplementaire)}</p>`:''}${p.evolutionsEnReserve?`<p>⭐ <b>Évolution en réserve :</b> ${p.evolutionsEnReserve}</p>`:''}${p.notes?`<p class="muted">${safe(p.notes)}</p>`:''}</div><div class="details"><section class="section"><h3>✨ Compétences</h3><div class="chips">${skills(p.competences)}</div></section>${equipSection(p)}${p.equipementEnvisage?.length?`<section class="section"><h3>🛒 Équipement envisagé (non acheté)</h3><div class="chips">${chips(p.equipementEnvisage)}</div></section>`:''}${atelier(p)}</div></article>`}
 
 // Classification prudente : les objets non classés restent consultables, sans case « Équipé ».
 // Une classification ne change jamais les possessions ni les règles officielles.
@@ -33,6 +33,9 @@ function equipMeta(name){
  const n=name.toLowerCase();
  if(/prêtée temporairement à gabin/.test(n))return null;
  if(/épée de ben.*prêt temporaire/.test(n))return {slot:'mains',hands:1};
+ if(/^(torche|lanterne)(?:\s|$)/i.test(name))return {slot:'mains',hands:1};
+ if(/^arc court gobelin/i.test(name))return {slot:'mains',hands:2};
+ if(/^épée(?:\s|$)/i.test(name))return {slot:'mains',hands:1};
  if(/hache à deux mains/.test(n))return {slot:'mains',hands:2};
  if(/^(bouclier|marteau renforcé|bâton de soin|sarbacane|arc court gobelin|arme légère|couteau nain)/i.test(name))return {slot:'mains',hands:1};
  if(/^armure légère/i.test(name))return {slot:'torse',hands:0};
@@ -42,29 +45,36 @@ function equipKey(p){return 'jdr-equipement-intention-v1-'+p.id}
 function savedEquip(p){try{const a=JSON.parse(localStorage.getItem(equipKey(p))||'[]');return Array.isArray(a)?a.filter(n=>p.equipement.includes(n)&&equipMeta(n)):[]}catch{return []}}
 function equipSection(p){
  const selected=savedEquip(p),eligible=p.equipement.filter(n=>equipMeta(n));
- return `<section class="section" data-equip-panel="${safe(p.id)}"><h3>🎒 Inventaire et équipement souhaité</h3><p class="muted">Prépare ce que tu souhaites porter au prochain tour. Le MJ valide les changements. Rien n'est modifié dans la partie tant qu'il ne les a pas confirmés.</p><div class="equip-status" data-equip-status></div>${p.equipement.map(n=>{const m=equipMeta(n);return `<div class="equip-row"><div class="equip-name"><button type="button" class="chip skill" data-item="${safe(n)}">${safe(n)} ⓘ</button>${m?`<div class="equip-slot">${m.hands?m.hands+' main'+(m.hands>1?'s':''):'Emplacement : '+m.slot}</div>`:''}</div>${m?`<label><input type="checkbox" data-equip-name="${safe(n)}" ${selected.includes(n)?'checked':''}> Équipé</label>`:'<span class="equip-slot">Inventaire</span>'}</div>`}).join('')}<p class="equip-warning" data-equip-warning role="status"></p><div class="equip-actions"><button type="button" data-copy-equip="${safe(p.id)}" ${!eligible.length?'disabled':''}>📋 Copier les intentions d’équipement</button><button type="button" data-reset-equip="${safe(p.id)}">Effacer la préparation</button></div><p class="muted" data-equip-copy-status role="status"></p></section>`;
+ return `<section class="section" data-equip-panel="${safe(p.id)}"><h3>🎒 Inventaire et équipement souhaité</h3><p class="muted">Prépare ce que tu souhaites porter au prochain tour. Le MJ valide les changements. Rien n'est modifié dans la partie tant qu'il ne les a pas confirmés.</p><div class="equip-status" data-equip-status></div>${avatarSection(p)}${p.equipement.map(n=>{const m=equipMeta(n);return `<div class="equip-row"><div class="equip-name"><button type="button" class="chip skill" data-item="${safe(n)}">${safe(n)} ⓘ</button>${m?`<div class="equip-slot">${m.hands?m.hands+' main'+(m.hands>1?'s':''):'Emplacement : '+m.slot}</div>`:''}</div>${m?`<label><input type="checkbox" data-equip-name="${safe(n)}" ${selected.includes(n)?'checked':''}> Équipé</label>`:'<span class="equip-slot">Inventaire</span>'}</div>`}).join('')}<p class="equip-warning" data-equip-warning role="status"></p><div class="equip-actions"><button type="button" data-copy-equip="${safe(p.id)}" ${!eligible.length?'disabled':''}>📋 Copier les intentions d’équipement</button><button type="button" data-reset-equip="${safe(p.id)}">Effacer la préparation</button></div><p class="muted" data-equip-copy-status role="status"></p></section>`;
 }
+const equipOrder=new Map();
 function updateEquipPanel(panel){
  const boxes=[...panel.querySelectorAll('[data-equip-name]')],chosen=boxes.filter(b=>b.checked).map(b=>b.dataset.equipName);
  const hands=chosen.reduce((sum,n)=>sum+equipMeta(n).hands,0);
- const slots=new Set(chosen.map(n=>equipMeta(n).slot).filter(s=>s!=='mains'));
- boxes.forEach(b=>{if(b.checked){b.disabled=false;return}const m=equipMeta(b.dataset.equipName);b.disabled=m.slot==='mains'?hands+m.hands>2:slots.has(m.slot)});
+ boxes.forEach(b=>b.disabled=false);
  panel.querySelector('[data-equip-status]').textContent=`Mains occupées : ${hands}/2 · ${chosen.length} objet(s) sélectionné(s)`;
+ const avatar=panel.querySelector('[data-avatar-id]');if(avatar)updateAvatar(avatar);
 }
-function restoreEquip(){el.querySelectorAll('[data-equip-panel]').forEach(updateEquipPanel)}
+function restoreEquip(){el.querySelectorAll('[data-equip-panel]').forEach(panel=>{const id=panel.dataset.equipPanel,boxes=[...panel.querySelectorAll('[data-equip-name]')];let order=savedEquip(window.avatarPeople[id]);let hands=0,slots=new Set();order=order.filter(n=>{const m=equipMeta(n);if(m.slot==='mains'){if(hands+m.hands>2)return false;hands+=m.hands}else{if(slots.has(m.slot))return false;slots.add(m.slot)}return true});boxes.forEach(b=>b.checked=order.includes(b.dataset.equipName));equipOrder.set(id,order);updateEquipPanel(panel)})}
 el.addEventListener('change',e=>{
  const b=e.target;if(!b.matches('[data-equip-name]'))return;
- const panel=b.closest('[data-equip-panel]'),id=panel.dataset.equipPanel,selected=[...panel.querySelectorAll('[data-equip-name]:checked')].map(x=>x.dataset.equipName);
- const hands=selected.reduce((a,n)=>a+equipMeta(n).hands,0),slots=selected.map(n=>equipMeta(n).slot).filter(s=>s!=='mains');
- if(hands>2||new Set(slots).size!==slots.length){b.checked=false;panel.querySelector('[data-equip-warning]').textContent='Impossible : mains ou emplacement déjà occupés.';return}
- panel.querySelector('[data-equip-warning]').textContent='';
- try{localStorage.setItem('jdr-equipement-intention-v1-'+id,JSON.stringify(selected))}catch{panel.querySelector('[data-equip-warning]').textContent='Stockage local indisponible : les choix ne survivront pas au rechargement.'}
+ const panel=b.closest('[data-equip-panel]'),id=panel.dataset.equipPanel,n=b.dataset.equipName,m=equipMeta(n),boxes=[...panel.querySelectorAll('[data-equip-name]')];
+ let selected=(equipOrder.get(id)||[]).filter(x=>x!==n&&boxes.some(q=>q.dataset.equipName===x&&q.checked));
+ const removed=[];
+ if(b.checked){
+  if(m.slot==='mains'){while(selected.reduce((a,x)=>a+equipMeta(x).hands,0)+m.hands>2){const i=selected.findIndex(x=>equipMeta(x).slot==='mains');if(i<0)break;removed.push(...selected.splice(i,1))}}
+  else{selected=selected.filter(x=>{if(equipMeta(x).slot===m.slot){removed.push(x);return false}return true})}
+  selected.push(n);
+ }
+ boxes.forEach(q=>q.checked=selected.includes(q.dataset.equipName));equipOrder.set(id,selected);
+ panel.querySelector('[data-equip-warning]').textContent=removed.length?'Rangé automatiquement : '+removed.join(', '):'';
+ try{localStorage.setItem('jdr-equipement-intention-v1-'+id,JSON.stringify(selected))}catch{panel.querySelector('[data-equip-warning]').textContent='Stockage local indisponible.'}
  updateEquipPanel(panel);
 });
 el.addEventListener('click',async e=>{
  const b=e.target.closest('[data-copy-equip],[data-reset-equip]');if(!b)return;
  const panel=b.closest('[data-equip-panel]'),id=panel.dataset.equipPanel;
- if(b.dataset.resetEquip){panel.querySelectorAll('[data-equip-name]').forEach(x=>{x.checked=false});try{localStorage.removeItem('jdr-equipement-intention-v1-'+id)}catch{}updateEquipPanel(panel);panel.querySelector('[data-equip-copy-status]').textContent='Préparation effacée sur cet appareil.';return}
+ if(b.dataset.resetEquip){equipOrder.delete(id);panel.querySelectorAll('[data-equip-name]').forEach(x=>{x.checked=false});try{localStorage.removeItem('jdr-equipement-intention-v1-'+id)}catch{}updateEquipPanel(panel);panel.querySelector('[data-equip-copy-status]').textContent='Préparation effacée sur cet appareil.';return}
  const selected=[...panel.querySelectorAll('[data-equip-name]:checked')].map(x=>x.dataset.equipName);
  const msg=JSON.stringify({personnage:id,type:'intention_equipement',equipement_souhaite:selected,validation:'en attente du MJ'},null,2);
  try{await navigator.clipboard.writeText(msg);panel.querySelector('[data-equip-copy-status]').textContent='Intentions copiées. Colle-les avec les actions des joueurs dans le chat du MJ.'}
