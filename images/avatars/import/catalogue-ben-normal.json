@@ -1,0 +1,52 @@
+{
+  "source": "file_00000000f88481f48c8508cacdb6ed1d.png",
+  "personnage": "ben",
+  "etat": "normal",
+  "grille": [
+    4,
+    2
+  ],
+  "statut": "a_valider",
+  "cases": [
+    {
+      "case": "A1",
+      "configuration": "libre-D__libre-G",
+      "fichier": "ben_normal_libre-D__libre-G.png"
+    },
+    {
+      "case": "A2",
+      "configuration": "epee-D__libre-G",
+      "fichier": "ben_normal_epee-D__libre-G.png"
+    },
+    {
+      "case": "A3",
+      "configuration": "libre-D__epee-G",
+      "fichier": "ben_normal_libre-D__epee-G.png"
+    },
+    {
+      "case": "A4",
+      "configuration": "bouclier-D__libre-G",
+      "fichier": "ben_normal_bouclier-D__libre-G.png"
+    },
+    {
+      "case": "B1",
+      "configuration": "libre-D__bouclier-G",
+      "fichier": "ben_normal_libre-D__bouclier-G.png"
+    },
+    {
+      "case": "B2",
+      "configuration": "epee-D__bouclier-G",
+      "fichier": "ben_normal_epee-D__bouclier-G.png"
+    },
+    {
+      "case": "B3",
+      "configuration": "bouclier-D__epee-G",
+      "fichier": "ben_normal_bouclier-D__epee-G.png"
+    },
+    {
+      "case": "B4",
+      "configuration": "hache-2m",
+      "fichier": "ben_normal_hache-2m.png"
+    }
+  ]
+}
