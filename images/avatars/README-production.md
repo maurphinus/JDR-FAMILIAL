@@ -1,11 +1,4 @@
 # Production des avatars
-Cette organisation complète le générateur existant. Le manifest.json existant reste inchangé et pilote l’affichage. Les nouveaux dossiers sont des espaces de préparation, pas encore reliés automatiquement au générateur.
+Trois états graphiques : normal, blesse, tres_blesse. Les deux variantes blessées partent indépendamment du normal validé. Le halo PV est indépendant ; seuils à confirmer.
 
-- import/ : fichiers bruts de tous les appareils.
-- prompts/ : gabarits réutilisables.
-- production/<personnage>/references/ : maîtres validés.
-- production/<personnage>/planches/ : planches originales et leurs métadonnées.
-- production/<personnage>/normal/, blesse_leger/, blesse_important/, blesse_grave/ : images individuelles après découpe et validation.
-- production/<personnage>/portrait/ : portrait fantasy distinct de l’avatar.
-
-Pour chaque planche, conserver le nombre de lignes et colonnes, l’ordre des configurations, l’état de santé, la référence et le prompt. Ne pas supposer que toutes les planches ont la même grille. Les identifiants doivent suivre le générateur existant. Ne publier dans le manifest qu’après validation. L’épée prêtée reste indisponible tant que le prêt est actif. Le halo de PV sera un effet CSS distinct, à implémenter ultérieurement. Les états important et grave restent à tester.
+import/ : originaux bruts, à conserver. prompts/ : gabarits. production/<personnage>/ : portrait/, references/, planches/, normal/, blesse/, tres_blesse/. Pour chaque planche, noter grille, ordre des configurations, état, référence et prompt. Ne publier dans manifest.json qu’après validation. Le générateur et le manifest restent inchangés. Le prompt blesse_leger.txt est conservé comme historique, non actif. Les nouveaux prompts restent à tester.
